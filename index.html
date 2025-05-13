@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spherion Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C6A878;
+      --background: linear-gradient(135deg, #0d1117 0%, #1e2632 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--background);
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -100px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12), transparent 70%);
+      transform: rotate(45deg);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav.dots {
+      position: fixed;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    nav.dots a {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #4b5563;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav.dots a.active,
+    nav.dots a:hover {
+      background: var(--gold);
+    }
+
+    section {
+      scroll-snap-align: start;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+
+    .hero, section, footer {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .hero p, section p {
+      max-width: 800px;
+      font-size: 1.2rem;
+      color: #d1d5db;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .highlight {
+      color: var(--gold);
+    }
+
+    footer {
+      background: transparent;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p, section p {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .logo {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="dots">
+    <a href="#hero" class="active"></a>
+    <a href="#mission"></a>
+    <a href="#whatwedo"></a>
+    <a href="#future"></a>
+    <a href="#contact"></a>
+  </nav>
+
+  <div class="hero" id="hero">
+    <img src="logo.png" alt="Spherion Labs Logo" class="logo">
+    <h1>Build Sovereignty. At Scale.</h1>
+    <p><strong>We’re not selling software.</strong> We’re engineering the <span class="highlight">digital nervous system of nations</span> — open-source, AI-enhanced, and fully sovereign.</p>
+  </div>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>To empower nations with full control over their digital infrastructure — no licenses, no dependencies, no compromises.</p>
+  </section>
+
+  <section id="whatwedo">
+    <h2>What We Do</h2>
+    <p>We provide a <span class="highlight">full, modular, open-source digital governance stack</span>, purpose-built for national transformation.</p>
+  </section>
+
+  <section id="future">
+    <h2>We Don’t Digitize the Past. We Build the Future.</h2>
+    <p>Our approach isn’t about modernizing outdated systems. We create <span class="highlight">new foundations for digital sovereignty</span> — open, secure, and built to evolve.</p>
+  </section>
+
+  <footer id="contact">
+    <p>Spherion Labs Limited | Abu Dhabi, UAE</p>
+    <p><a href="mailto:info@spherionlabs.com" style="color: var(--gold); text-decoration: none;">info@spherionlabs.com</a></p>
+  </footer>
+</body>
+</html>
