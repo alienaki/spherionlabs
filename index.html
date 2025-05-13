@@ -17,6 +17,13 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
     body {
       background: var(--background);
       color: #ffffff;
@@ -25,7 +32,6 @@
       position: relative;
       overflow-x: hidden;
       background-attachment: fixed;
-      min-height: 100vh;
     }
 
     body::before {
@@ -71,12 +77,8 @@
       scroll-snap-align: start;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
-    }
-
     .hero, section, footer {
+      scroll-snap-align: start;
       position: relative;
       z-index: 1;
       min-height: 100vh;
@@ -153,7 +155,7 @@
   </nav>
 
   <div class="hero" id="hero">
-    <img src="logo.png" alt="Spherion Labs Logo" class="logo">
+    <img src="/mnt/data/b10f1941-a115-4bb3-9db5-c962fcf02183.png" alt="Spherion Labs Logo" class="logo">
     <h1>Build Sovereignty. At Scale.</h1>
     <p><strong>We’re not selling software.</strong> We’re engineering the <span class="highlight">digital nervous system of nations</span> — open-source, AI-enhanced, and fully sovereign.</p>
   </div>
